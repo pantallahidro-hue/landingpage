@@ -148,7 +148,7 @@
                         <p class="text-slate-600 text-sm font-light leading-relaxed">El futuro del agua es digital. Descubre cómo la integración de PLCs y la configuración de pantallas industriales te dan el control milimétrico.</p>
                     </div>
                 </div>
-                <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandBlue/40 transition-all duration-300">
+                <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandRed/40 transition-all duration-300">
                     <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandRed/10 flex items-center justify-center text-brandRed font-bold text-xl">🛠️</div>
                     <div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">Mantenimiento Inteligente</h3>
@@ -211,14 +211,14 @@
         </div>
     </section>
 
-    <!-- SECCIÓN EL EXPERTO (Fondo de foto corregido y botones agregados) -->
+    <!-- SECCIÓN EL EXPERTO -->
     <section class="py-24 px-4 bg-white relative overflow-hidden">
         <div class="absolute top-1/2 left-0 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl -translate-y-1/2"></div>
         
         <div class="max-w-4xl mx-auto relative z-10 bg-white border border-slate-200 p-8 md:p-12 rounded-3xl shadow-sm">
             <div class="grid md:grid-cols-3 gap-8 items-center">
                 
-                <!-- Contenedor del Logo con fondo Blanco Puro (Sin Degradados) -->
+                <!-- Contenedor del Logo con fondo Blanco Puro -->
                 <div class="md:col-span-1 flex justify-center">
                     <div class="w-48 h-48 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center p-4">
                         <img src="logo.png" alt="Logo Hidrosir" class="max-w-full max-h-full object-contain">
@@ -278,7 +278,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN FINALES Y REGISTRO -->
+    <!-- SECCIÓN FINALES Y REGISTRO (Formulario funcional con Web3Forms) -->
     <section id="registro" class="relative py-24 px-4 bg-white glow-radial-celeste-light">
         <div class="max-w-xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Es hora de tomar el control de tu recurso más valioso</h2>
@@ -286,18 +286,24 @@
                 Deja tus datos para coordinar una consultoría técnica o reservar tu lugar en nuestra próxima sesión estratégica personalizada.
             </p>
             
-            <form class="space-y-4 text-left bg-white border border-slate-200 p-6 md:p-8 rounded-2xl shadow-md" onsubmit="event.preventDefault(); alert('¡Simulación de Registro Exitoso!');">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left bg-white border border-slate-200 p-6 md:p-8 rounded-2xl shadow-md">
+                <!-- Tu llave de acceso de Web3Forms -->
+                <input type="hidden" name="access_key" value="d1546d09-3d46-432f-b77f-90d62e6748e0">
+                
+                <!-- Opcional: Evita el spam de bots de forma silenciosa -->
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Nombre Completo</label>
-                    <input type="text" placeholder="Ej. Juan Pérez" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
+                    <input type="text" name="name" placeholder="Ej. Juan Pérez" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Correo Electrónico de Empresa</label>
-                    <input type="email" placeholder="ejemplo@empresa.com" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
+                    <input type="email" name="email" placeholder="ejemplo@empresa.com" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
                 </div>
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">WhatsApp / Teléfono</label>
-                    <input type="tel" placeholder="+54 9 ..." required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
+                    <input type="tel" name="phone" placeholder="+54 9 ..." required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
                 </div>
                 
                 <button type="submit" class="w-full mt-4 py-4 px-6 font-bold text-white bg-gradient-to-r from-brandRed to-brandRed rounded-lg transition-all duration-300 transform hover:brightness-110 shadow-lg shadow-brandRed/20 focus:outline-none">
@@ -350,7 +356,6 @@
             moveCarousel();
         }
 
-        // Permitir clic en los puntitos indicadores
         indicators.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 currentSlide = index;
@@ -358,7 +363,6 @@
             });
         });
 
-        // Inicializar indicadores al cargar
         updateIndicators();
     </script>
 
