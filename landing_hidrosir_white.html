@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hidrosir - El Dominio del Agua (Masterclass)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandRed: '#ad3335',
+                        brandBlue: '#4c6881',
+                        brandCeleste: '#578c92',
+                        lightBg: '#ffffff',
+                        sectionBg: '#f8fafc',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+        }
+        .glow-radial-celeste-light {
+            background: radial-gradient(circle at 50% 50%, rgba(87, 140, 146, 0.08) 0%, rgba(255, 255, 255, 0) 70%);
+        }
+        .glow-radial-red-light {
+            background: radial-gradient(circle at 80% 20%, rgba(173, 51, 53, 0.04) 0%, rgba(255, 255, 255, 0) 60%);
+        }
+    </style>
+</head>
+<body class="text-slate-700 antialiased overflow-x-hidden">
+
+    <!-- BARRA DE NAVEGACIÓN SUPERIOR -->
+    <nav class="absolute top-0 left-0 w-full z-40 bg-white/80 backdrop-blur-md border-b border-slate-100 py-4 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="#">
+                <img src="logo.png" alt="Hidrosir Logo" class="h-10 sm:h-12 w-auto object-contain">
+            </a>
+            <a href="#registro" class="text-xs sm:text-sm font-bold text-brandRed border-2 border-brandRed rounded-xl px-4 py-2 hover:bg-brandRed hover:text-white transition-all duration-300">
+                RESERVAR CUPO
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative flex flex-col items-center justify-center min-h-screen text-center px-4 overflow-hidden bg-white pt-24">
+        <video autoplay loop muted playsinline class="absolute z-10 w-auto min-w-full min-h-full max-w-none object-cover opacity-20">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        
+        <div class="absolute z-20 w-full h-full bg-gradient-to-b from-white/40 via-white/85 to-white"></div>
+
+        <div class="relative z-30 max-w-4xl mx-auto flex flex-col items-center justify-center flex-grow pt-12 pb-12">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-white uppercase bg-brandRed rounded-full shadow-md shadow-brandRed/20 animate-pulse">
+                Clase Magistral Gratuita / Sesión Estratégica
+            </span>
+            
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight">
+                El Dominio del Agua: <br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandCeleste via-brandBlue to-brandCeleste">
+                    Optimiza tu Industria y Escala tu Eficiencia
+                </span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10 font-light leading-relaxed">
+                Descubre los sistemas definitivos de purificación. Desde la precisión de la ósmosis inversa hasta la automatización con PLCs, aprende cómo el agua de calidad superior transforma tu negocio.
+            </p>
+            
+            <a href="#registro" class="group relative inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-brandRed rounded-xl shadow-lg shadow-brandRed/30 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-brandRed/40 focus:outline-none">
+                <span>RESERVAR MI ACCESO AHORA</span>
+                <svg class="w-5 h-5 ml-2 transition-transform duration-300 transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN EL PROBLEMA -->
+    <section class="relative py-24 px-4 bg-white glow-radial-celeste-light">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+                ¿El agua de tu zona está frenando tu crecimiento?
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-12 font-light">
+                Si manejas maquinaria industrial, sistemas de riego o necesitas estándares de purificación impecables, sabes perfectamente que no cualquier agua sirve.
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 text-left">
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-brandRed/40 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-brandRed/10 flex items-center justify-center mb-4 text-brandRed font-bold text-lg">!</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Costos por Sarro</h3>
+                    <p class="text-sm text-slate-600 font-light">Desgaste prematuro de tus costosos equipos debido a la alta conductividad e incrustaciones.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-brandRed/40 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-brandRed/10 flex items-center justify-center mb-4 text-brandRed font-bold text-lg">↓</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Bajo Rendimiento</h3>
+                    <p class="text-sm text-slate-600 font-light">Sistemas de filtrado convencionales que no dan la talla frente a las normativas de tu producción.</p>
+                </div>
+                <div class="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-md hover:border-brandRed/40 transition-all duration-300">
+                    <div class="w-10 h-10 rounded-lg bg-brandRed/10 flex items-center justify-center mb-4 text-brandRed font-bold text-lg">⏳</div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Falta de Control</h3>
+                    <p class="text-sm text-slate-600 font-light">Procesos manuales ineficientes que te hacen perder tiempo y exigen supervisión constante.</p>
+                </div>
+            </div>
+            <p class="mt-12 text-brandCeleste font-medium italic">Es hora de evolucionar al siguiente nivel del tratamiento integral del agua.</p>
+        </div>
+    </section>
+
+    <!-- SECCIÓN QUÉ APRENDERÁS -->
+    <section class="py-24 px-4 bg-sectionBg relative overflow-hidden border-y border-slate-100">
+        <div class="absolute inset-0 glow-radial-red-light pointer-events-none"></div>
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Qué descubrirás en esta experiencia con Hidrosir</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-brandCeleste via-brandBlue to-brandRed mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandBlue/40 transition-all duration-300">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandCeleste/10 flex items-center justify-center text-brandCeleste font-bold text-xl">💧</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">La Revolución de la Ósmosis Inversa</h3>
+                        <p class="text-slate-600 text-sm font-light leading-relaxed">Comprende cómo implementar membranas de alta eficiencia para llevar los niveles de conductividad a su point óptimo, garantizando pureza absoluta.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandBlue/40 transition-all duration-300">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandBlue/10 flex items-center justify-center text-brandBlue font-bold text-xl">⚙️</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Filtración Avanzada de Precisión</h3>
+                        <p class="text-slate-600 text-sm font-light leading-relaxed">Más allá de la arena. Domina el uso estratégico de resinas catiónicas, zeolita y carbón activado para eliminar metales pesados de raíz.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandBlue/40 transition-all duration-300">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandCeleste/10 flex items-center justify-center text-brandCeleste font-bold text-xl">💻</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Automatización y Control Total</h3>
+                        <p class="text-slate-600 text-sm font-light leading-relaxed">El futuro del agua es digital. Descubre cómo la integración de PLCs y la configuración de pantallas industriales te dan el control milimétrico.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandBlue/40 transition-all duration-300">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandRed/10 flex items-center justify-center text-brandRed font-bold text-xl">🛠️</div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 mb-2">Mantenimiento Inteligente</h3>
+                        <p class="text-slate-600 text-sm font-light leading-relaxed">Aprende a prolongar la vida útil de tus ablandadores e instalaciones con protocolos de servicio técnico preventivos precisos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CARRUSEL DE IMÁGENES -->
+    <section class="py-24 px-4 bg-white border-b border-slate-100">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Nuestras Instalaciones en Acción</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto mb-10 font-light">Ingeniería aplicada y montajes de precisión diseñados para una máxima durabilidad.</p>
+            
+            <!-- Estructura del Carrusel -->
+            <div class="relative w-full overflow-hidden rounded-2xl shadow-lg bg-slate-50 border border-slate-200 group">
+                <div id="carouselContainer" class="flex transition-transform duration-500 ease-out" style="transform: translateX(0%);">
+                    <!-- Foto 1 -->
+                    <div class="min-w-full h-64 sm:h-96 md:h-[450px]">
+                        <img src="foto1.png" alt="Instalación Hidrosir 1" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Foto 2 -->
+                    <div class="min-w-full h-64 sm:h-96 md:h-[450px]">
+                        <img src="foto2.png" alt="Instalación Hidrosir 2" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Foto 3 -->
+                    <div class="min-w-full h-64 sm:h-96 md:h-[450px]">
+                        <img src="foto3.png" alt="Instalación Hidrosir 3" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Foto 4 -->
+                    <div class="min-w-full h-64 sm:h-96 md:h-[450px]">
+                        <img src="foto4.png" alt="Instalación Hidrosir 4" class="w-full h-full object-cover">
+                    </div>
+                    <!-- Foto 5 -->
+                    <div class="min-w-full h-64 sm:h-96 md:h-[450px]">
+                        <img src="foto5.png" alt="Instalación Hidrosir 5" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Botón Izquierda -->
+                <button onclick="prevSlide()" class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm text-slate-800 shadow-md flex items-center justify-center font-bold hover:bg-white transition-all z-30">
+                    &#10094;
+                </button>
+                <!-- Botón Derecha -->
+                <button onclick="nextSlide()" class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/80 backdrop-blur-sm text-slate-800 shadow-md flex items-center justify-center font-bold hover:bg-white transition-all z-30">
+                    &#10095;
+                </button>
+
+                <!-- Indicadores Inferiores -->
+                <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-30">
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all"></span>
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all"></span>
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all"></span>
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all"></span>
+                    <span class="dot-indicator w-2.5 h-2.5 rounded-full bg-white bg-opacity-50 cursor-pointer transition-all"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EL EXPERTO (Fondo de foto corregido y botones agregados) -->
+    <section class="py-24 px-4 bg-white relative overflow-hidden">
+        <div class="absolute top-1/2 left-0 w-96 h-96 bg-brandBlue/5 rounded-full blur-3xl -translate-y-1/2"></div>
+        
+        <div class="max-w-4xl mx-auto relative z-10 bg-white border border-slate-200 p-8 md:p-12 rounded-3xl shadow-sm">
+            <div class="grid md:grid-cols-3 gap-8 items-center">
+                
+                <!-- Contenedor del Logo con fondo Blanco Puro (Sin Degradados) -->
+                <div class="md:col-span-1 flex justify-center">
+                    <div class="w-48 h-48 rounded-2xl bg-white border border-slate-200 shadow-sm flex items-center justify-center p-4">
+                        <img src="logo.png" alt="Logo Hidrosir" class="max-w-full max-h-full object-contain">
+                    </div>
+                </div>
+
+                <!-- Bio e Integración de Redes Sociales -->
+                <div class="md:col-span-2 text-center md:text-left">
+                    <span class="text-xs font-bold uppercase tracking-widest text-brandRed mb-2 block">Tu Instructor y Aliado</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4">Sobre Hidrosir</h2>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-4">
+                        Con bases firmes en el Partido de La Costa y más de dos décadas de conocimiento aplicado en la región, <strong class="text-slate-900 font-semibold">Hidrosir</strong> no es solo un proveedor de equipos; es el puente entre la ingeniería, la tecnología y el agua pura.
+                    </p>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6">
+                        Nos especializamos en el diseño, instalación y capacitación de sistemas integrales. No adivinamos: medimos, calculamos e implementamos soluciones definitivas.
+                    </p>
+
+                    <!-- Botones de Enlaces y Redes Sociales -->
+                    <div class="flex flex-wrap gap-3 justify-center md:justify-start">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-[#25D366] text-white shadow-sm hover:brightness-105 transition-all">
+                            <span>WhatsApp</span>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-gradient-to-tr from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-sm hover:brightness-105 transition-all">
+                            <span>Instagram</span>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://facebook.com/#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-[#1877F2] text-white shadow-sm hover:brightness-105 transition-all">
+                            <span>Facebook</span>
+                        </a>
+                        <!-- Web Oficial -->
+                        <a href="#" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold bg-brandBlue text-white shadow-sm hover:brightness-105 transition-all">
+                            <span>Página Web</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN TESTIMONIOS -->
+    <section class="py-24 px-4 bg-sectionBg border-y border-slate-100 text-center">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-12">Resultados que hablan por sí mismos</h2>
+            <div class="relative p-8 rounded-2xl bg-white border border-slate-200 max-w-2xl mx-auto shadow-sm">
+                <span class="absolute top-2 left-6 text-6xl text-brandCeleste/20 font-serif pointer-events-none">“</span>
+                <p class="text-slate-600 italic font-light text-base leading-relaxed relative z-10">
+                    Teníamos problemas graves de contaminación y sarro que afectaban nuestras instalaciones. El equipo de Hidrosir realizó un servicio completo, optimizó el clorador y nos instaló un sistema de ósmosis que nos cambió la operatividad por completo. Altamente recomendados para trabajos técnicos complejos.
+                </p>
+                <div class="mt-6 text-sm">
+                    <span class="block font-bold text-slate-900">[Nombre de un Cliente Real]</span>
+                    <span class="text-brandBlue text-xs font-medium">Empresa / Productor Industrial</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN FINALES Y REGISTRO -->
+    <section id="registro" class="relative py-24 px-4 bg-white glow-radial-celeste-light">
+        <div class="max-w-xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">Es hora de tomar el control de tu recurso más valioso</h2>
+            <p class="text-slate-600 font-light mb-8">
+                Deja tus datos para coordinar una consultoría técnica o reservar tu lugar en nuestra próxima sesión estratégica personalizada.
+            </p>
+            
+            <form class="space-y-4 text-left bg-white border border-slate-200 p-6 md:p-8 rounded-2xl shadow-md" onsubmit="event.preventDefault(); alert('¡Simulación de Registro Exitoso!');">
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">Correo Electrónico de Empresa</label>
+                    <input type="email" placeholder="ejemplo@empresa.com" required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-slate-500 mb-1.5">WhatsApp / Teléfono</label>
+                    <input type="tel" placeholder="+54 9 ..." required class="w-full bg-slate-50 border border-slate-200 rounded-lg px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-brandCeleste transition-colors">
+                </div>
+                
+                <button type="submit" class="w-full mt-4 py-4 px-6 font-bold text-white bg-gradient-to-r from-brandRed to-brandRed rounded-lg transition-all duration-300 transform hover:brightness-110 shadow-lg shadow-brandRed/20 focus:outline-none">
+                    SÍ, QUIERO TRANSFORMAR MIS SISTEMAS DE AGUA
+                </button>
+            </form>
+            
+            <p class="mt-4 text-xs text-slate-400 font-light">
+                * Cupos mensuales limitados para auditorías en el Partido de La Costa y zonas aledañas.
+            </p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-slate-50 border-t border-slate-100 text-center text-xs text-slate-500">
+        <p>&copy; 2026 Hidrosir. Todos los derechos reservados. Diseñado bajo la identidad de la marca.</p>
+    </footer>
+
+    <!-- LÓGICA DEL CARRUSEL INTERACTIVO -->
+    <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+        const container = document.getElementById('carouselContainer');
+        const indicators = document.querySelectorAll('.dot-indicator');
+
+        function updateIndicators() {
+            indicators.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.remove('bg-opacity-50', 'w-2.5');
+                    dot.classList.add('bg-brandRed', 'w-5');
+                } else {
+                    dot.classList.remove('bg-brandRed', 'w-5');
+                    dot.classList.add('bg-opacity-50', 'w-2.5');
+                }
+            });
+        }
+
+        function moveCarousel() {
+            container.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateIndicators();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            moveCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            moveCarousel();
+        }
+
+        // Permitir clic en los puntitos indicadores
+        indicators.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentSlide = index;
+                moveCarousel();
+            });
+        });
+
+        // Inicializar indicadores al cargar
+        updateIndicators();
+    </script>
+
+</body>
+</html>
