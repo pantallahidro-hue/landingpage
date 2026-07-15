@@ -42,17 +42,17 @@
 </head>
 <body class="text-slate-700 antialiased overflow-x-hidden">
 
-    <!-- HERO SECTION -->
+<!-- HERO SECTION -->
     <header class="relative flex flex-col items-center justify-center min-h-screen text-center px-4 overflow-hidden bg-white pt-12 md:pt-16">
 
-        <!-- Video de fondo con inset-0 para evitar espacios en los bordes -->
-        <video autoplay loop muted playsinline class="absolute inset-0 z-10 w-full h-full object-cover opacity-20">
+        <!-- Subimos la opacidad del video a opacity-45 para que tenga más presencia -->
+        <video autoplay loop muted playsinline class="absolute inset-0 z-10 w-full h-full object-cover opacity-45">
             <source src="video.mp4" type="video/mp4">
             Tu navegador no soporta videos.
         </video>
 
-        <!-- Capa de degradado corregida con inset-0 y fundido perfecto desde blanco sólido -->
-        <div class="absolute inset-0 z-20 bg-gradient-to-b from-white via-white/80 to-white"></div>
+        <!-- Degradado corregido: de blanco casi sólido a transparente total en el centro, y vuelve a blanco al final -->
+        <div class="absolute inset-0 z-20 bg-gradient-to-b from-white/90 via-transparent to-white"></div>
 
         <div class="relative z-30 max-w-4xl mx-auto flex flex-col items-center justify-center flex-grow pt-8 pb-12">
 
@@ -131,7 +131,7 @@
                     </div>
                 </div>
                 <div class="flex gap-4 p-5 rounded-xl bg-white border border-slate-200 shadow-sm hover:border-brandBlue/40 transition-all duration-300">
-                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandBlue/10 flex items-center justify-center text-brandBlue font-bold text-xl">🫗</div>
+                    <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-brandBlue/10 flex items-center justify-center text-brandBlue font-bold text-xl">💦</div>
                     <div>
                         <h3 class="text-xl font-bold text-slate-900 mb-2">¡Todo lo que podés producir!</h3>
                         <p class="text-slate-600 text-sm font-light leading-relaxed">¡Te vamos a mostrar todos los productos que podés realizar con nuestros equipos, con la garantía y respaldo técnico de Hidrosir!</p>
@@ -214,21 +214,47 @@
     </section>
 
     <!-- SECCIÓN TESTIMONIOS -->
-    <section class="py-24 px-4 bg-sectionBg border-y border-slate-100 text-center">
-        <div class="max-w-3xl mx-auto">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mb-12">Resultados que hablan por sí mismos</h2>
-            <div class="relative p-8 rounded-2xl bg-white border border-slate-200 max-w-2xl mx-auto shadow-sm">
-                <span class="absolute top-2 left-6 text-6xl text-brandCeleste/20 font-serif pointer-events-none">“</span>
-                <p class="text-slate-600 italic font-light text-base leading-relaxed relative z-10">
-                    Teníamos problemas graves de contaminación y sarro que afectaban nuestras instalaciones. El equipo de Hidrosir realizó un servicio completo, optimizó el clorador y nos instaló un sistema de ósmosis que nos cambió la operatividad por completo. Altamente recomendados para trabajos técnicos complejos.
-                </p>
-                <div class="mt-6 text-sm">
-                    <span class="block font-bold text-slate-900">[Nombre de un Cliente Real]</span>
-                    <span class="text-brandBlue text-xs font-medium">Empresa / Productor Industrial</span>
+        <section class="py-24 px-4 bg-sectionBg border-y border-slate-100 text-center">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Título de la Sección -->
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Resultados que hablan por sí mismos</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-brandCeleste via-brandBlue to-brandRed mx-auto rounded-full mb-16"></div>
+
+                <!-- Grid de Testimonios (1 col en móvil, 2 cols en desktop) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
+
+                    <!-- Testimonio 1: Cristian Figueroa -->
+                    <div class="relative p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                        <span class="absolute top-2 left-6 text-6xl text-brandCeleste/20 font-serif pointer-events-none">“</span>
+
+                        <p class="text-slate-600 italic font-light text-base leading-relaxed relative z-10 mb-6">
+                            "Quería agradecer a los chicos de Hidrosir por hacerme parte de la comunidad. Ellos me vinieron a instalar un equipo completo. Estoy muy agradecido con ellos; la verdad, muy recomendable."
+                        </p>
+
+                        <div class="border-t border-slate-100 pt-4 mt-auto">
+                            <span class="block font-bold text-slate-900 text-base">Cristian Figueroa</span>
+                            <span class="text-brandBlue text-xs font-semibold uppercase tracking-wider">Entre Ríos</span>
+                        </div>
+                    </div>
+
+                    <!-- Testimonio 2: César Gómez -->
+                    <div class="relative p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-md hover:-translate-y-1">
+                        <span class="absolute top-2 left-6 text-6xl text-brandCeleste/20 font-serif pointer-events-none">“</span>
+
+                        <p class="text-slate-600 italic font-light text-base leading-relaxed relative z-10 mb-6">
+                            "Gracias por haber venido. La verdad que la calidad de trabajo que tienen es extraordinaria; eso es fundamental."
+                        </p>
+
+                        <div class="border-t border-slate-100 pt-4 mt-auto">
+                            <span class="block font-bold text-slate-900 text-base">César Gómez</span>
+                            <span class="text-brandBlue text-xs font-semibold uppercase tracking-wider">Río Negro</span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- SECCIÓN FINALES Y REGISTRO (Acción Directa a WhatsApp) -->
     <section id="registro" class="relative py-24 px-4 bg-white glow-radial-celeste-light">
